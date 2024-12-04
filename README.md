@@ -1,7 +1,7 @@
 # Sitzplanprojekt 
 Ziel:
 - Einen Sitzplan mithilfe von zuerst statischen und danach dynamischen Koordinantenzuweisung
-- Prefabs gestalten
+- Prefabs zu gestalten
 - AudioClip abspielen
 - .jpg auf jeden Sitzplatz platzieren
 
