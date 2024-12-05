@@ -12,3 +12,11 @@ Vorangehensweise:
 
 https://github.com/user-attachments/assets/0bb694fd-656d-48b3-99d3-fbe1594c811b
 
+## Lessons learned: 
+- Unity macht oft komische Sachen
+- Prefabs sind unnormal praktisch 
+- Immer zuerst pullen (Workflow)
+-   
+
+
+

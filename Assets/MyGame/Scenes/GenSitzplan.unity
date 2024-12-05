@@ -173,7 +173,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0266d57cb61902944a6c53c37fa6f9fe, type: 2}
   - {fileID: 11400000, guid: 0266d57cb61902944a6c53c37fa6f9fe, type: 2}
   - {fileID: 11400000, guid: 0266d57cb61902944a6c53c37fa6f9fe, type: 2}
-  tablePrefab: {fileID: 434670440695745763, guid: e419a4d6fa85aae4b880fbba836df462, type: 3}
+  tablePrefab: {fileID: 2051328502521738933, guid: 3d9fa16005f1f01409976d49f35c8aeb, type: 3}
   chairPrefab: {fileID: 4241078938135998373, guid: c7df17e3c76f3ce41b1349e6b66c6149, type: 3}
 --- !u!1 &1905522114
 GameObject:
@@ -236,7 +236,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -260,13 +260,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1905522114}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.031099683, y: -0, z: -0, w: 0.99951637}
-  m_LocalPosition: {x: 0, y: 2.05, z: -24.13}
+  m_LocalRotation: {x: 0.37497345, y: 0.14789711, z: -0.060732428, w: 0.9131445}
+  m_LocalPosition: {x: 1.6, y: 33.2, z: -24.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 3.564, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 44.65, y: 18.4, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
