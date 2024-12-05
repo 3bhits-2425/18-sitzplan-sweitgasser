@@ -15,7 +15,7 @@ public class Manager : MonoBehaviour
     {
         for (int row = 0; row < tableLayout.rows; row++)
         {
-            for (int columns = 0; columns < tableLayout.columns; columns++)
+            for (int columns = 7; columns < tableLayout.columns; columns++)
             {
                 Vector3 tablePosition = new Vector3(columns * tableLayout.tableSpacing, 0, row * tableLayout.tableSpacing);
                 GameObject table = Instantiate(tablePrefab, tablePosition, Quaternion.identity, transform);
