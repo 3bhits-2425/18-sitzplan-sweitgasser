@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   studentName: 
   eyeColor: {r: 0, g: 0, b: 0, a: 0}
-  studentImage: {fileID: 21300000, guid: 1a44cd18f60944845a5e5cedccd7fae0, type: 3}
+  studentImage: {fileID: 21300000, guid: f3f3421ddea628e4c8686693ade23b0d, type: 3}
   studentClip: {fileID: 0}

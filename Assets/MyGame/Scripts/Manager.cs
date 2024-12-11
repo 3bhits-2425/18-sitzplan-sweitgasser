@@ -53,37 +53,43 @@ public class Manager : MonoBehaviour
 
     public void AssignStudentToChair(GameObject table)
     {
-        if (studentIndex >= students.Length)
+        // Finde alle "StudentImage"-Objekte unter diesem Tisch
+        Transform[] allTransforms = table.GetComponentsInChildren<Transform>();
+        foreach (var transform in allTransforms)
         {
-            Debug.LogWarning("No more students to assign!");
-            return;
-        }
-
-        StudentData student = students[studentIndex];
-        studentIndex++;
-
-        // Debug-Log
-        Debug.Log($"Assigning student: {student.name} with image: {student.studentImage}");
-
-        Transform imageTransform = table.transform.Find("StudentImage");
-        if (imageTransform != null)
-        {
-            var imageComponent = imageTransform.GetComponent<UnityEngine.UI.Image>();
-            if (imageComponent != null)
+            if (transform.name.StartsWith("StudentImage"))
             {
-                imageComponent.sprite = student.studentImage;
+                if (studentIndex >= students.Length)
+                {
+                    Debug.LogWarning("No more students to assign!");
+                    return;
+                }
 
-                // Debug-Log
-                Debug.Log($"Successfully set image for {student.name}");
+                StudentData student = students[studentIndex];
+                studentIndex++;
+
+                Debug.Log($"Assigning student: {student.name} with image: {student.studentImage}");
+
+                // Überprüfe, ob eine Image-Komponente vorhanden ist
+                var imageComponent = transform.GetComponent<UnityEngine.UI.Image>();
+                if (imageComponent != null)
+                {
+                    if (student.studentImage != null)
+                    {
+                        imageComponent.sprite = student.studentImage;
+                        Debug.Log($"Successfully set image for {student.name} on {transform.name}");
+                    }
+                    else
+                    {
+                        Debug.LogWarning($"Student {student.name} has no image!");
+                    }
+                }
+                else
+                {
+                    Debug.LogWarning($"No Image component found on {transform.name}");
+                }
             }
-            else
-            {
-                Debug.LogWarning($"No Image component found on {imageTransform.name}");
-            }
-        }
-        else
-        {
-            Debug.LogWarning($"No StudentImage transform found on chair {table.name}");
         }
     }
+
 }
