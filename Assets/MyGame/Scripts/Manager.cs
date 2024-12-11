@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Manager : MonoBehaviour
 {
@@ -9,52 +10,80 @@ public class Manager : MonoBehaviour
     [SerializeField] private GameObject tablePrefab; // Tisch Prefab
     [SerializeField] private GameObject chairPrefab; // Stuhl Prefab
 
-    private int studentIndex = 0; // Um durch die Schülerdaten zu iterieren
+    public int studentIndex = 0; // Um durch die Schülerdaten zu iterieren
 
     void Start()
     {
+
+        Debug.Log($"Students array length: {students.Length}");
+        for (int i = 0; i < students.Length; i++)
+        {
+            Debug.Log($"Student {i}: {students[i].name}, Image: {students[i].studentImage}");
+        }
+
+        // Restlicher Code...
+
+
         for (int row = 0; row < tableLayout.rows; row++)
         {
             for (int column = 0; column < tableLayout.columns; column++)
             {
                 Vector3 tablePosition = new Vector3(column * tableLayout.tableSpacing, 0, row * tableLayout.tableSpacing);
                 GameObject table = Instantiate(tablePrefab, tablePosition, Quaternion.identity, transform);
+                AssignStudentToChair(table);
 
-                // Sessel platzieren
-                Transform pos1 = table.transform.Find("pos1");
-                Transform pos2 = table.transform.Find("pos2");
+                 //Sessel platzieren
+                //Transform pos1 = table.transform.Find("pos1");
+                //Transform pos2 = table.transform.Find("pos2");
 
-                if (pos1)
-                {
-                    GameObject chair1 = Instantiate(chairPrefab, pos1.position, pos1.rotation, table.transform);
-                    AssignStudentToChair(chair1);
-                }
+                //if (pos1)
+                //{
+                //    GameObject chair1 = Instantiate(chairPrefab, pos1.position, pos1.rotation, table.transform);
+                //    AssignStudentToChair(chair1);
+                //}
 
-                if (pos2)
-                {
-                    GameObject chair2 = Instantiate(chairPrefab, pos2.position, pos2.rotation, table.transform);
-                    AssignStudentToChair(chair2);
-                }
+                //if (pos2)
+                //{
+                //    GameObject chair2 = Instantiate(chairPrefab, pos2.position, pos2.rotation, table.transform);
+                //    AssignStudentToChair(chair2);
+                //}
             }
         }
     }
 
-    private void AssignStudentToChair(GameObject chair)
+    public void AssignStudentToChair(GameObject table)
     {
-        if (studentIndex >= students.Length) return; // Keine weiteren Schüler
+        if (studentIndex >= students.Length)
+        {
+            Debug.LogWarning("No more students to assign!");
+            return;
+        }
 
         StudentData student = students[studentIndex];
         studentIndex++;
 
-        // Suche nach einer UI-Image-Komponente am Stuhl
-        Transform imageTransform = chair.transform.Find("StudentImage");
+        // Debug-Log
+        Debug.Log($"Assigning student: {student.name} with image: {student.studentImage}");
+
+        Transform imageTransform = table.transform.Find("StudentImage");
         if (imageTransform != null)
         {
             var imageComponent = imageTransform.GetComponent<UnityEngine.UI.Image>();
             if (imageComponent != null)
             {
-                imageComponent.sprite = student.studentImage; // Weist das Schülerbild zu
+                imageComponent.sprite = student.studentImage;
+
+                // Debug-Log
+                Debug.Log($"Successfully set image for {student.name}");
             }
+            else
+            {
+                Debug.LogWarning($"No Image component found on {imageTransform.name}");
+            }
+        }
+        else
+        {
+            Debug.LogWarning($"No StudentImage transform found on chair {table.name}");
         }
     }
 }

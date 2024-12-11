@@ -170,9 +170,24 @@ MonoBehaviour:
   tableLayout: {fileID: 11400000, guid: e09fa61974a333d42801100981b3d0fd, type: 2}
   students:
   - {fileID: 11400000, guid: 0266d57cb61902944a6c53c37fa6f9fe, type: 2}
-  - {fileID: 11400000, guid: 0266d57cb61902944a6c53c37fa6f9fe, type: 2}
-  - {fileID: 11400000, guid: 0266d57cb61902944a6c53c37fa6f9fe, type: 2}
-  - {fileID: 11400000, guid: 0266d57cb61902944a6c53c37fa6f9fe, type: 2}
+  - {fileID: 11400000, guid: 782b7d60e0d10a840a19daad95ca1589, type: 2}
+  - {fileID: 11400000, guid: 11645a6f63964334ea1ae6d9c8773c2b, type: 2}
+  - {fileID: 11400000, guid: 6c9c3af6d431cdc4f9eea3cfc146c506, type: 2}
+  - {fileID: 11400000, guid: a375028aecd69b6458e8d823f894c9f5, type: 2}
+  - {fileID: 11400000, guid: 2026c79d101f98d4b9bf89b86d9ca894, type: 2}
+  - {fileID: 11400000, guid: d8af30ea126a920438d8cf6e4ce89526, type: 2}
+  - {fileID: 11400000, guid: c68150456c5dec24bbcff7fbdc1210c0, type: 2}
+  - {fileID: 11400000, guid: d9f4a9fc13f5a9f47821e30e5034d4f9, type: 2}
+  - {fileID: 11400000, guid: ca1e8ece241c4204c82365f51b935c5f, type: 2}
+  - {fileID: 11400000, guid: ea5c9aa0b961a5b489825e5ea2d8e3dd, type: 2}
+  - {fileID: 11400000, guid: 5d2d5b3b3e9719e44bbbef063523aa31, type: 2}
+  - {fileID: 11400000, guid: ffca077a104b62f4d80c1525ad8cbe1b, type: 2}
+  - {fileID: 11400000, guid: 43e7960e02df6314593e35e25cae009a, type: 2}
+  - {fileID: 11400000, guid: 01c01b80780c31a4895620be61784546, type: 2}
+  - {fileID: 11400000, guid: 45e767f5b6c1bc4478a7fc93247448f2, type: 2}
+  - {fileID: 11400000, guid: 50690787ccd13c341bcaceed0fad8052, type: 2}
+  - {fileID: 11400000, guid: 2b3ab7367f6cd534b89a72ae5c063b59, type: 2}
+  - {fileID: 11400000, guid: 9448d0a0136e82c47be05db55b5037b3, type: 2}
   tablePrefab: {fileID: 2051328502521738933, guid: 3d9fa16005f1f01409976d49f35c8aeb, type: 3}
   chairPrefab: {fileID: 4241078938135998373, guid: c7df17e3c76f3ce41b1349e6b66c6149, type: 3}
 --- !u!1 &1905522114
